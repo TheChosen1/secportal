@@ -1,1 +1,1 @@
-<div class="content">Dashboard</div>
+<div class="content">Dashboard Screen For the SecPortal</div>
