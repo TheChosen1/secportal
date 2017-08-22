@@ -1,0 +1,224 @@
+body{
+	margin: 0;
+}
+.wrapper{
+	font-family: 'open sans', sans-serif;
+	height: 100%;
+	width: 100%;
+	background-color: #f1c40f;
+	
+	z-index: 999;
+	position: absolute;
+
+}
+.container{
+	background: #ecf0f1;
+	width: 60%;
+	height: 500px;
+	/*margin-top: 10%;*/
+	/*margin-left: 15%;*/
+	margin: 100px auto auto auto;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+}
+.info{
+	background:#f1c40f;
+	width: 40%;
+	height: 100%;
+	border-radius: 15px 0 0 15px;
+	float: left;
+}
+.info img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin: 30% 30% 10%;
+}
+.info h4{
+	/*margin-left: 100px;*/
+}
+.info p{
+	text-align: center;
+	font-size: 18px;
+	width: 90%;
+	margin: 0 auto;
+	
+	/*margin-left: 100px;*/
+}
+.info i{
+	text-align: center;
+	margin-left: 35%;
+	margin-top: 30px;
+}
+.fill{
+	background:#fff;
+	width: 60%;
+	height: 100%;
+	border-radius: 0 15px 15px 0;
+	float: right;
+
+}
+.fill form{
+	padding:50px;
+}
+.fill input[type="text"], input[type="password"]{
+	height: 30px;
+	width: 100%;
+	color: inherit;
+	font-size: 17px;
+	border:none;
+	border-bottom: 1px solid rgba(149, 165, 166,0.1);
+	border-radius: none;
+	margin-bottom: 20px;
+	background-color: #eee;
+	padding-left: 10px; 
+
+}
+.fill input[type="date"]{
+	height: 30px;
+	color: #bbb;
+	width: 70%;
+
+	font-size: 18px;
+	border:none;
+	border-bottom: 1px solid rgba(149, 165, 166,0.1);
+	border-radius: none;
+	margin-bottom: 20px;
+	background-color: #eee;
+	padding-left: 10px; 
+
+}
+.fill input[type="phone"]{
+	height: 30px;
+	color: #bbb;
+	width: 100%;
+	font-size: 18px;
+	border:none;
+	border-bottom: 1px solid rgba(149, 165, 166,0.1);
+	border-radius: none;
+	margin-bottom: 20px;
+	background-color: #eee;
+	padding-left: 10px; 
+
+}
+.fill input[type="checkbox"]{
+	margin-bottom: 10px;
+
+}
+
+.fill input[type="file"]{
+	padding: 15px 30px;
+	cursor: pointer;
+	color:#fff;
+	border-radius: 4px;
+	border:none;
+	background-color: #2ECC71;
+	/*border-bottom: 4px solid #27AE60;*/
+	margin-bottom: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.fill textarea{
+	
+	color: inherit;
+	width: 100%;
+	font-size: 18px;
+	border:none;
+	border-bottom: 1px solid rgba(149, 165, 166,0.1);
+	border-radius: none;
+	margin-bottom: 20px;
+	background-color: #eee;
+	padding-left: 10px; 
+}
+.fill select{
+	height: 30px;
+	color: #bbb;
+	width: 100%;
+	font-size: 18px;
+	border:none;
+	border-bottom: 1px solid rgba(149, 165, 166,0.1);
+	border-radius: none;
+	margin-bottom: 20px;
+}
+.fill input[type="select"]{
+	height: 45px;
+	color: inherit;
+	width: 100%;
+	font-size: 18px;
+	border:none;
+	border-bottom: 1px solid rgba(149, 165, 166,0.1);
+	border-radius: none;
+	margin-bottom: 20px;
+	background-color: #eee;
+	padding-left: 10px; 
+
+}
+
+.fill label{
+	color:#ddd;
+}
+
+.fill input[type="text"]:focus, input[type="password"]:focus{
+	border:none;
+	border-bottom: 1px solid rgba(149, 165, 166,0.1);
+	outline: none;
+	background-color: #fff;
+
+}
+.fill a{
+	text-decoration: none;
+	color: rgba(243, 156, 18,0.4);
+}
+
+
+
+.btn-login{
+	padding: 15px 30px;
+	cursor: pointer;
+	color:#fff;
+	border-radius: 4px;
+	border:none;
+	background-color: #2ECC71;
+	/*border-bottom: 4px solid #27AE60;*/
+	margin-bottom: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*personal*/
+.overflow {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+/*This is for the form multiphase */
+/*form#multiphase {border:#000 2px solid; }*/
+form#multiphase >#guardian,#emergency,#show_all{display: none;}
+
+/*This is for the signin container*/
+.signin-container{
+	width: 500px;
+	height: 400px;
+	text-align: center;
+	margin: 100px auto auto auto;
+	background-color: rgba(52,73,94,0.7);
+	border-radius: 4px;
+	
+}
+.signin-container img{
+	width: 120px;
+	height: 120px;
+	border-radius:50%;
+	margin-top: -60px;
+	margin-bottom: 30px;
+
+}
+.signin-container input[type="text"], input[type="password"]{
+	height: 45px;
+	width: 300px;
+	font-size: 18px;
+	border:none;
+	margin-bottom: 20px;
+	border-radius: 4px;
+	background-color: #fff;
+	padding-left: 35px;
+}
