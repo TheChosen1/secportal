@@ -16,6 +16,9 @@
 			case array("students"):
 				require VIEW.'students/view.students.php';
 			break;
+			case array("settings"):
+				require VIEW.'view.settings.php';
+			break;
 			case array("logout"):
 				session_destroy();
 				require VIEW.'view.signin.php';

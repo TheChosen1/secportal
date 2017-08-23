@@ -25,11 +25,12 @@
 	define('MEDIA_THUMBNAIL', 'media/php/files/thumbnail/');							// App Media Storage Thumbnail path
 	define('BACKUP', 'backup/');														// Backup path
 
-	define('IMAGES',  'images/');														// App Images path
+	define('IMAGES',  APP_URL.'images/');														// App Images path
 	define('IMAGES_BTN',  IMAGES.'button/');											// App Button path
 	define('IMAGES_LOGO', IMAGES.'logo/');												// App Logo path
 	define('IMAGES_BG', IMAGES.'background/');											// App Background path
 	define('APP_LOGO', IMAGES_LOGO.'logo.png');										// App Logo
+	define('ICONS', IMAGES.'icons/');
 	
 	define('MODEL', 'model/');															// Model path
 	

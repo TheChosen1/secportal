@@ -222,4 +222,16 @@ div#header{
 	#7f8c8d
 }
 /*Utility Panel*/
+/*This is for the settings page*/
+.settings{
+	min-height: 1200px;
+	background: #bdc3c7;
+	padding: 10px;
+}
+.settings h4{
+	margin-bottom: 5px;
+}
 
+.settings > .icon-group{
+	display: inline-block;
+}

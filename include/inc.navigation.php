@@ -22,7 +22,7 @@
 		<li><i class="icon left fa fa-user fa-lg fa-fw"></i><a href="">View Staff</a></li>
 		<li><i class="icon left fa fa-user fa-lg fa-fw"></i><a href="">View Students</a></li>
 		<li><i class="icon left fa fa-money fa-lg fa-fw"></i><a href="">Finances</a></li>
-		<li><i class="icon left fa fa-wrench fa-lg fa-fw"></i><a href="">Settings</a></li>
+		<li><i class="icon left fa fa-wrench fa-lg fa-fw"></i><a href="index.php?page=settings">Settings</a></li>
 
 		
 		
