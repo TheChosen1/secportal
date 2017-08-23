@@ -12,7 +12,7 @@
 			</div>
 			<div class="icon-item">
 				<img src="<?php echo ICONS.'021-exam'; ?>">
-				<a href="#"><p>Schoo Grades</p></a><br>
+				<a href="#"><p>School Grades</p></a><br>
 			</div>
 			<div class="icon-item">
 				<img src="<?php echo ICONS.'020-desk'; ?>">
