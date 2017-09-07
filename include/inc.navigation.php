@@ -23,6 +23,8 @@
 		<li><i class="icon left fa fa-user fa-lg fa-fw"></i><a href="">View Students</a></li>
 		<li><i class="icon left fa fa-money fa-lg fa-fw"></i><a href="">Finances</a></li>
 		<li><i class="icon left fa fa-wrench fa-lg fa-fw"></i><a href="index.php?page=settings">Settings</a></li>
+		<li><hr></li>
+		<li><i class="icon left fa fa-warning fa-lg fa-fw"></i><a href="index.php?page=users">Users</a></li>
 
 		
 		

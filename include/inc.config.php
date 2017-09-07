@@ -36,7 +36,7 @@
 	
 	define('SCRIPTS', 'scripts/');														// Plugin path
 	
-	define('STYLE', 'styles/');															// Styling path	
+	define('STYLES', 'styles/');															// Styling path	
 	
 	define('INC', 'include/');															// Include path
 	define('CONFIG', INC.'inc.config.php');											// Config path

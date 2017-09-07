@@ -19,6 +19,37 @@
 			case array("settings"):
 				require VIEW.'view.settings.php';
 			break;
+			// This is the temporary part
+			case array("users"):
+				$users = $utility->read('','users','','','id');
+				require VIEW.'users/view.users.php';
+			break;
+			case array("user","new"):
+				$message = "";
+				require VIEW.'users/view.adduser.php';
+			break;
+			case array("user","create"):
+				if(isset($_POST)){
+					// extract($_POST);
+					// $create = $user->createuser($firstname,$lastname,$middlename,$gender,$dob,$state_origin,$lga,$address,$uid);
+					$fieldvalues = 'uid,firstname,lastname,middlename,gender,dob,state_origin,lga,address';
+					$create = $utility->create('users',$_POST,$fieldvalues);
+					$message = "";
+					if($create){
+						$message = "Successfully added to database";
+					}else{
+						$message = "Error adding to database";
+					}
+
+				}
+				require VIEW.'users/view.adduser.php';
+			break;
+			case array("user","delete",true):
+				$delete = $utility->delete('users','id',$id);
+				print_r($delete);
+			break;
+
+			// End Temp
 			case array("logout"):
 				session_destroy();
 				require VIEW.'view.signin.php';
@@ -42,8 +73,9 @@
 			case array("signin","process"):
 				if(isset($_POST)){
 					extract($_POST);
-					$result = $search->searchSingleRow('uid', 'client_tb','uname',$uname,'','');
-					if($result == 0): $uid = ""; else: extract($result); endif;
+					$result = $utility->read('id,uid', 'client_tbl','uname',$uname,'','');
+					print_r($result);
+					if($result['rowNum'] == 1): extract($result['result'][0]); else: $uid = ""; endif;
 					$login = $user->login($username,$password,$uid);
 					if(isset($_SESSION['login'])){
 						require VIEW.'view.dashboard.php';

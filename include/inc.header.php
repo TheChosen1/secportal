@@ -1,9 +1,13 @@
 <html>
 <head>
 	<title>SecPortal</title>
-	<link rel="stylesheet" type="text/css" href="styles/css/font-awesome.css">
+	<?php
+		$autoloader->loadFiles(STYLES, '');
+		$autoloader->loadFiles(SCRIPTS, '');
+	?>
+	<!-- <link rel="stylesheet" type="text/css" href="styles/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="styles/layout.css">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable=0"> -->
+	<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable=0"> -->
 </head>
 <body>
 	<div id="header">

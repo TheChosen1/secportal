@@ -1,1 +1,1 @@
-<div class="content">Dashboard Screen For the SecPortal</div>
+<div class="content">Dashboard Screen For the SecPortal <?php print_r($_SESSION); ?></div>
