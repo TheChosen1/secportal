@@ -18,7 +18,7 @@
 	define('APP_SLOGAN','');															// App Slogan
 	define('COPYRIGHT', APP_NAME. ' &copy; 2017');										// App Copyright
 	define('APP_ROOT', $_SERVER['DOCUMENT_ROOT'].'/SECPORTAL');								// App ROOT
-	define('APP_URL', 'http://localhost:88/secportal/');											// App URL Local System is localhost:88//
+	define('APP_URL', 'http://localhost/secportal/');											// App URL Local System is localhost:88//
 	define('FAVICON', APP_URL.'/favicon.ico');											// App Icon
 	
 	define('MEDIA_STORAGE', 'media/php/files/');										// App Media Storage path

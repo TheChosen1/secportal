@@ -10,24 +10,30 @@
 
 	if(isset($_SESSION['login'])){
 		switch ($param) {
+
 			case array("dashboard"):
 				require VIEW.'view.dashboard.php';
 			break;
+
 			case array("students"):
 				require VIEW.'students/view.students.php';
 			break;
+
 			case array("settings"):
 				require VIEW.'view.settings.php';
 			break;
+
 			// This is the temporary part
 			case array("users"):
 				$users = $utility->read('','users','','','id');
 				require VIEW.'users/view.users.php';
 			break;
+
 			case array("user","new"):
 				$message = "";
 				require VIEW.'users/view.adduser.php';
 			break;
+
 			case array("user","create"):
 				if(isset($_POST)){
 					// extract($_POST);
@@ -44,9 +50,10 @@
 				}
 				require VIEW.'users/view.adduser.php';
 			break;
+
 			case array("user","delete",true):
 				$delete = $utility->delete('users','id',$id);
-				print_r($delete);
+				//echo $delete;
 			break;
 
 			// End Temp
@@ -73,8 +80,8 @@
 			case array("signin","process"):
 				if(isset($_POST)){
 					extract($_POST);
-					$result = $utility->read('id,uid', 'client_tbl','uname',$uname,'','');
-					print_r($result);
+					$result = $utility->read('uid','client_tbl','uname',$uname,'','');
+					//print_r($result);
 					if($result['rowNum'] == 1): extract($result['result'][0]); else: $uid = ""; endif;
 					$login = $user->login($username,$password,$uid);
 					if(isset($_SESSION['login'])){

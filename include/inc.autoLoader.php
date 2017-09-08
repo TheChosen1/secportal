@@ -14,20 +14,14 @@ class AutoLoader {
 			closedir($dir);
 			sort($dirFiles);
 			foreach($dirFiles as $file){
-				
-				
 				/*$extension = pathinfo($file, PATHINFO_EXTENSION);*/
 				if  (strpos ($file, '.js') == true) {
-					echo '<script src="'.$path.$file.'" language="javascript"></script><br />' ; 
+					echo '<script src="'.$path.$file.'" language="javascript"></script>'.PHP_EOL; 
 				//} else if (stristr ($file, 'print.css') == true) {
 				} else if  (strpos ($file, '.css') == true) {
-					echo '<link rel="stylesheet" href="'.$path.$file.'" type="text/css"';
+					echo '<link rel="stylesheet" href="'.$path.$file.'" type="text/css"'.PHP_EOL; 
 					if ($file ==  'print.css') { echo ' media="print"'; } 
-					echo '/><br />';
-				//} else if(strpos ($file, 'print.css') == false){
-				//} else if($file !==  'print.css'){ 
-					//echo '<link rel="stylesheet" href="'.$path.$file.'" type="text/css" /> ';
-					
+					echo '/>';
 				} else { 
 					require $path.$file;
 				

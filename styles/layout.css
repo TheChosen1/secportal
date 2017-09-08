@@ -58,9 +58,6 @@ div#header{
 	float: left;
 	padding: 10px;
 	/*z-index: -1;*/
-	
-	
-
 }
 
 .leftbar .nav {
@@ -69,31 +66,28 @@ div#header{
 .leftbar .nav ul{
 	list-style: none;
 
-
-
 }
 .leftbar .nav li{
 	margin-bottom: 10px;
 	/*border-bottom: 1px solid #f1c40f;*/
 }
+
 .leftbar .nav li a{
 	color: #fff;
 	left:0;
 	padding: 15px 20px;
 }
+
 .leftbar .nav li a:hover{
 	/*background-color: #ccc;*/
 	color: #ccc;
 }
-
 
 .icon {
 	color: white;
 	float: left;
 	/*margin-right: px;*/
 }
-
-
 
 .content{
 	height: 100%;
@@ -104,7 +98,6 @@ div#header{
 	margin-top: 50px;  
 }
 
-
 .rightbar{
 	position: fixed;
 	width: 15%;
@@ -114,9 +107,8 @@ div#header{
 	margin-top: 50px;
 	margin-bottom: 50px;
 	/*padding:5px;*/
-	
-
 }
+
 /*Chat section*/
 .chat{
 	height: 50%;
@@ -126,13 +118,16 @@ div#header{
 	/*margin-bottom: 5px;*/
 	
 }
+
 .chat::-webkit-scrollbar{
 	width: 10px;
 }
+
 .chat::-webkit-scrollbar-thumb{
 	border-radius: 5px;
 	background:rgba(0,0,0,.1);
 }
+
 .box{
 	width: 100%;
 	height: 65px;
@@ -146,6 +141,7 @@ div#header{
 	/*margin-bottom: 1px;*/
 	/*border-bottom: 1px solid silver;*/
 }
+
 .box .user-photo{
 	width: 40px;
 	height: 40px;
@@ -155,9 +151,11 @@ div#header{
 	border-radius: 50%;
 	overflow: hidden;
 }
+
 .box .user-photo img {
 	width: 100%;
 }
+
 .box .box-info{
 	width: 40%;
 	margin-top: 5px;
@@ -166,22 +164,28 @@ div#header{
 	font-weight:bold;
 	font-size: 0.9em;
 }
+
 .online{
 	color: #2ecc71;
 }
+
 .offline{
 	color: #95a5a6;
 }
+
 .dot{
 	line-height: 13px;
 	font-size: 20px;
 }
+
 .white{
 	background:#ecf0f1;
 }
+
 .grey{
 	background:#bdc3c7;
 }
+
 /*End Chat session*/
 .activity{
 	height: 35%;
@@ -199,6 +203,7 @@ div#header{
 	z-index: 3;
 
 }
+
 .colors{
 	#1abc9c
 	#2ecc71
@@ -221,6 +226,7 @@ div#header{
 	#bdc3c7
 	#7f8c8d
 }
+
 /*Utility Panel*/
 /*This is for the settings page*/
 .settings{
@@ -228,6 +234,7 @@ div#header{
 	background: #bdc3c7;
 	padding: 10px;
 }
+
 .settings h4{
 	margin-bottom: 5px;
 }

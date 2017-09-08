@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="styles/utility.css">
+<!-- <link rel="stylesheet" type="text/css" href="styles/utility.css"> -->
 <div class="wrapper">
 	<?php if(!isset($uname)){
 		$uname = "";

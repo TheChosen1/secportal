@@ -26,7 +26,7 @@
 			$this->db->close_db();
 		}
 
-		public function read($field,$table,$searchField = null,$searchString = null, $order = null, $sort = 'DESC'){
+		public function read($field,$table,$searchField = null,$searchString = null,$order = null, $sort = 'DESC'){
 			if($searchString == "" || $searchField == "" ):$where=""; else: $where = "WHERE ".$searchField." = '".$searchString."'"; endif;
 			if($order != ""):$orderby ='ORDER BY '.$order.' '.$sort; else: $orderby = ""; endif;
 			if($field != ""):$field = $field; else: $field = "*"; endif;
@@ -51,7 +51,6 @@
 				$bla = "UPDATE $table SET firstname = :firstname, lastname = :lastname WHERE id = '$id' ";
 				$query = "INSERT INTO {$table} ({$fieldvalues}) VALUES ({$modvalues}) ";
 				$sql = $this->db->prepare($query);
-				
 				if($sql->execute($data)){
 				 	return 1;
 				}else{
@@ -66,17 +65,16 @@
 		}
 
 		public function delete($table,$field,$data){
-			if(isset($_POST)){unset($_POST['submit']); $data = array_values($_POST[0]);}
-			return $data;
-			// $query = "DELETE FROM $table WHERE $field IN ($data)";
-			// if($query){
-			// 	$stmt = $this->db->prepare($query);
-			// 	$stmt->execute();
-			// 	return 1;
-			// }else{
-			// 	return 0;
-			// }
-			// $this->db->close_db();
+			if($_POST):unset($_POST['submit']); $data = implode(',',$_POST['id']); endif;
+			$query = "DELETE FROM $table WHERE $field IN ($data)";
+			if($query){
+				$stmt = $this->db->prepare($query);
+				$stmt->execute();
+				return 1;
+			}else{
+				return 0;
+			}
+			$this->db->close_db();
 		}
 	}
 
