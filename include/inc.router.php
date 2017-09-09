@@ -1,16 +1,12 @@
 <?php 
-	// if (isset($_SESSION['user'])) {
-		
-	// }else{
-	// 	header('location:'.VIEW.'view.signin.php');
-	// }
-	
+
 	extract($_GET);
 	$param = array_values($_GET);
 
 	if(isset($_SESSION['login'])){
 		switch ($param) {
 
+			// MODULE
 			case array("dashboard"):
 				require VIEW.'view.dashboard.php';
 			break;
@@ -23,21 +19,21 @@
 				require VIEW.'view.settings.php';
 			break;
 
-			// This is the temporary part
 			case array("users"):
 				$users = $utility->read('','users','','','id');
 				require VIEW.'users/view.users.php';
 			break;
 
+			// MODAL-BOX
 			case array("user","new"):
 				$message = "";
 				require VIEW.'users/view.adduser.php';
 			break;
 
+			// CREATE
 			case array("user","create"):
 				if(isset($_POST)){
 					// extract($_POST);
-					// $create = $user->createuser($firstname,$lastname,$middlename,$gender,$dob,$state_origin,$lga,$address,$uid);
 					$fieldvalues = 'uid,firstname,lastname,middlename,gender,dob,state_origin,lga,address';
 					$create = $utility->create('users',$_POST,$fieldvalues);
 					$message = "";
@@ -46,17 +42,20 @@
 					}else{
 						$message = "Error adding to database";
 					}
-
 				}
 				require VIEW.'users/view.adduser.php';
 			break;
 
+			// READ
+
+			// UPDATE
+
+			// DELETE
 			case array("user","delete",true):
 				$delete = $utility->delete('users','id',$id);
-				//echo $delete;
 			break;
 
-			// End Temp
+			// END
 			case array("logout"):
 				session_destroy();
 				require VIEW.'view.signin.php';
