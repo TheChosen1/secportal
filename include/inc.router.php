@@ -49,6 +49,26 @@
 			// READ
 
 			// UPDATE
+			case array("user","update",true):
+				$message = "";
+				// Search from the users table based on the id field
+				$users = $utility->read('','users','id',$id,'');
+				require VIEW.'users/view.updateuser.php';
+			break;
+
+			case array("user","confirmupdate",true):
+				$fieldvalues = 'firstname,lastname,middlename,gender,dob,state_origin,lga,address';
+				$message = "";
+				//Search from the users table based on the id field
+				// $transform = $utility->transform($fieldvalues);
+				$update = $utility->update('users',$_POST,$fieldvalues,'id',$id);
+				if($update == 1){
+					$message = "Update Successful";
+				}else{
+					$message = "Error during update transaction";
+				}
+
+			break;
 
 			// DELETE
 			case array("user","delete",true):

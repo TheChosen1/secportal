@@ -12,9 +12,9 @@
 				$modvalues = ':'.str_replace(',',',:',$fieldvalues);
 
 				$query = "INSERT INTO {$table} ({$fieldvalues}) VALUES ({$modvalues}) ";
-				$sql = $this->db->prepare($query);
+				$stmt = $this->db->prepare($query);
 				
-				if($sql->execute($data)){
+				if($stmt->execute($data)){
 				 	return 1;
 				}else{
 				 	return 0;
@@ -42,16 +42,23 @@
 			}
 			$this->db->close_db();
 		}
-
 		public function update($table,$data,$fieldvalues,$searchField = null,$searchString = null){
 			unset($data['submit']);
+
+
+
+
 			if($searchString == "" || $searchField == "" ):$where=""; else: $where = "WHERE ".$searchField." = '".$searchString."'"; endif;
 			if(count(explode(',',$fieldvalues)) == count($data)){
-				$modvalues = ':'.str_replace(',',',:',$fieldvalues);
-				$bla = "UPDATE $table SET firstname = :firstname, lastname = :lastname WHERE id = '$id' ";
-				$query = "INSERT INTO {$table} ({$fieldvalues}) VALUES ({$modvalues}) ";
-				$sql = $this->db->prepare($query);
-				if($sql->execute($data)){
+				$values = explode(',',$fieldvalues);
+				$modvalues = "";
+				foreach ($values as $value) {
+				 	$modvalues .= $value.' = :'.$value.', ';
+				}
+				$modvalues = rtrim($modvalues,", ");
+				$query = "UPDATE $table SET $modvalues $where";
+				$stmt = $this->db->prepare($query);
+				if($stmt->execute($data)){
 				 	return 1;
 				}else{
 				 	return 0;
@@ -62,6 +69,16 @@
 
 			$this->db->close_db();
 
+		}
+
+		public function transform($fieldvalues){
+			// $modvalues = str_replace(',',' =:'.$fieldvalues.', ',$fieldvalues);
+			$values = explode(',',$fieldvalues);
+			$modvalues = "";
+			foreach ($values as $value) {
+				$modvalues .= $value.' = :'.$value.',';
+			}
+			print_r($modvalues);
 		}
 
 		public function delete($table,$field,$data){
