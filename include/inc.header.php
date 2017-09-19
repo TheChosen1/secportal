@@ -9,6 +9,6 @@
 </head>
 <body>
 	<div id="header">
-		<div class="logo"><a href="#">Sec<span style="font-weight: 800;">Portal</span></a></div>
+		<div class="logo"><a href="#">SEC<span style="font-weight: 800;">PORTAL</span></a></div>
 		<div class="" ><a href="index.php?page=logout">logout</a></div>
 	</div>
