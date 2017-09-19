@@ -1,16 +1,183 @@
-body{
-	margin: 0;
+
+@font-face{ 
+	font-family: 'Lato-ExtraBold'; 
+	src: url('../fonts/Lato-ExtraBold.eot'); 
+	src: url('../fonts/Lato-ExtraBold.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/Lato-ExtraBold.woff') format('woff'), 
+		 url('../fonts/Lato-ExtraBold.ttf') format('truetype'), 
+		 url('../fonts/Lato-ExtraBold.svg#webfont') format('svg'); 
 }
+
+@font-face{ 
+	font-family: 'Lato-Bold'; 
+	src: url('../fonts/Lato-Bold.eot'); 
+	src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/Lato-Bold.woff') format('woff'), 
+		 url('../fonts/Lato-Bold.ttf') format('truetype'), 
+		 url('../fonts/Lato-Bold.svg#webfont') format('svg'); 
+}
+
+@font-face{ 
+	font-family: 'Lato-Light'; 
+	src: url('../fonts/Lato-Light.eot'); 
+	src: url('../fonts/Lato-Light.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/Lato-Light.woff') format('woff'), 
+		 url('../fonts/Lato-Light.ttf') format('truetype'), 
+		 url('../fonts/Lato-Light.svg#webfont') format('svg'); 
+}
+
+@font-face{ 
+	font-family: 'Lato-ExtraLight'; 
+	src: url('../fonts/Lato-ExtraLight.eot'); 
+	src: url('../fonts/Lato-ExtraLight.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/Lato-ExtraLight.woff') format('woff'), 
+		 url('../fonts/Lato-ExtraLight.ttf') format('truetype'), 
+		 url('../fonts/Lato-ExtraLight.svg#webfont') format('svg'); 
+}
+
+@font-face{ 
+	font-family: 'Lato-Thin'; 
+	src: url('../fonts/Lato-Thin.eot'); 
+	src: url('../fonts/Lato-Thin.eot?#iefix') format('embedded-opentype'), 
+		 url('../fonts/Lato-Thin.woff') format('woff'), 
+		 url('../fonts/Lato-Thin.ttf') format('truetype'), 
+		 url('../fonts/Lato-Thin.svg#webfont') format('svg'); 
+}
+
+
+body {
+	font-family: 'Lato-Light', sans-serif;
+	width:100%;
+	margin: 0;
+	font-size:0.875em;
+	line-height:1.2;
+	overflow:hidden;
+}
+
+h1{
+	font-weight:lighter;
+	font-size:3.25em;
+	line-height:1.2;
+	border:none;
+}
+
+h2{
+	font-weight: normal;
+	font-size:2.250em;
+	line-height:1.2;
+	border:none;
+}
+
+h3{
+	font-weight: normal;
+	font-size:1.500em;
+	line-height:1.2;
+	border:none;
+}
+
+h4{
+	font-weight: normal;
+	font-size:1.250em;
+	line-height:1.2;
+	border:none;
+}
+
+h5{
+	font-weight: normal;
+	font-size:1.000em;
+	line-height:1.2;
+	border:none;
+}
+
+h6{
+	font-weight: normal;
+	font-size:0.875em;
+	line-height:1.2;
+	border:none;
+}
+
+h7{
+	font-weight: normal;
+	font-size:0.750em;
+	line-height:1.2;
+	border:none;
+}
+
+h8{
+	font-weight: normal;
+	font-size:0.625em;
+	line-height:1.2;
+	border:none;
+}
+
+hr{ 
+	border: 0; 
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(5,69,97,0.33), rgba(0,0,0,0)); 
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(5,69,97,0.33), rgba(0,0,0,0)); 
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(5,69,97,0.33), rgba(0,0,0,0)); 
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(5,69,97,0.33), rgba(0,0,0,0)); 
+}
+strong, .strong{
+	font-weight:bold;
+}
+
+em, .italic{
+	font-style:italic;
+}
+
+u, .underline{
+	display:inline;
+	text-decoration: underline;
+}
+
+dl, .overline {
+	display:inline;
+	text-decoration: overline;
+}
+
+a{
+	text-decoration:none;
+	color:#FFFFFF;
+	cursor: pointer;
+	cursor: hand;
+}
+
+a:visited{
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:none;
+	color:#E0E0E0;
+} 
+
+p{
+	margin:20px 0px 0px 0px ;
+}
+
+img, .highlight, .order, .viewList{
+	cursor: pointer;
+	cursor: hand;
+}
+
+.logo a {
+	font-family: 'Lato-ExtraBold', sans-serif;
+}
+
+.logo a span{
+	font-family: 'Lato-Thin', sans-serif;
+}
+
 .wrapper{
-	font-family: 'open sans', sans-serif;
+	font-family: 'Lato-Light', sans-serif;
 	height: 100%;
 	width: 100%;
 	background-color: #f1c40f;
-	
 	z-index: 999;
 	position: absolute;
-
 }
+
 .container{
 	background: #ecf0f1;
 	width: 60%;
@@ -22,6 +189,7 @@ body{
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	
 }
+
 .info{
 	background:#f1c40f;
 	width: 40%;
@@ -29,15 +197,18 @@ body{
 	border-radius: 15px 0 0 15px;
 	float: left;
 }
+
 .info img{
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
 	margin: 30% 30% 10%;
 }
+
 .info h4{
 	/*margin-left: 100px;*/
 }
+
 .info p{
 	text-align: center;
 	font-size: 18px;
@@ -46,11 +217,13 @@ body{
 	
 	/*margin-left: 100px;*/
 }
+
 .info i{
 	text-align: center;
 	margin-left: 35%;
 	margin-top: 30px;
 }
+
 .fill{
 	background:#fff;
 	width: 60%;
@@ -59,9 +232,11 @@ body{
 	float: right;
 
 }
+
 .fill form{
 	padding:50px;
 }
+
 .fill input[type="text"], input[type="password"]{
 	height: 30px;
 	width: 100%;
@@ -75,6 +250,7 @@ body{
 	padding-left: 10px; 
 
 }
+
 .fill input[type="date"]{
 	height: 30px;
 	color: #bbb;
@@ -89,6 +265,7 @@ body{
 	padding-left: 10px; 
 
 }
+
 .fill input[type="phone"]{
 	height: 30px;
 	color: #bbb;
@@ -102,6 +279,7 @@ body{
 	padding-left: 10px; 
 
 }
+
 .fill input[type="checkbox"]{
 	margin-bottom: 10px;
 
@@ -118,6 +296,7 @@ body{
 	margin-bottom: 20px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .fill textarea{
 	
 	color: inherit;
@@ -130,6 +309,7 @@ body{
 	background-color: #eee;
 	padding-left: 10px; 
 }
+
 .fill select{
 	height: 30px;
 	color: #bbb;
@@ -140,6 +320,7 @@ body{
 	border-radius: none;
 	margin-bottom: 20px;
 }
+
 .fill input[type="select"]{
 	height: 45px;
 	color: inherit;
@@ -165,12 +346,11 @@ body{
 	background-color: #fff;
 
 }
+
 .fill a{
 	text-decoration: none;
 	color: rgba(243, 156, 18,0.4);
 }
-
-
 
 .btn-login{
 	padding: 15px 30px;
@@ -204,6 +384,7 @@ form#multiphase >#guardian,#emergency,#show_all{display: none;}
 	border-radius: 4px;
 	
 }
+
 .signin-container img{
 	width: 120px;
 	height: 120px;
@@ -212,6 +393,7 @@ form#multiphase >#guardian,#emergency,#show_all{display: none;}
 	margin-bottom: 30px;
 
 }
+
 .signin-container input[type="text"], input[type="password"]{
 	height: 45px;
 	width: 300px;
