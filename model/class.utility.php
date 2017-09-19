@@ -10,10 +10,8 @@
 			unset($data['submit']);
 			if(count(explode(',',$fieldvalues)) == count($data)){
 				$modvalues = ':'.str_replace(',',',:',$fieldvalues);
-
 				$query = "INSERT INTO {$table} ({$fieldvalues}) VALUES ({$modvalues}) ";
 				$stmt = $this->db->prepare($query);
-				
 				if($stmt->execute($data)){
 				 	return 1;
 				}else{
@@ -42,12 +40,9 @@
 			}
 			$this->db->close_db();
 		}
+
 		public function update($table,$data,$fieldvalues,$searchField = null,$searchString = null){
 			unset($data['submit']);
-
-
-
-
 			if($searchString == "" || $searchField == "" ):$where=""; else: $where = "WHERE ".$searchField." = '".$searchString."'"; endif;
 			if(count(explode(',',$fieldvalues)) == count($data)){
 				$values = explode(',',$fieldvalues);
@@ -71,16 +66,6 @@
 
 		}
 
-		public function transform($fieldvalues){
-			// $modvalues = str_replace(',',' =:'.$fieldvalues.', ',$fieldvalues);
-			$values = explode(',',$fieldvalues);
-			$modvalues = "";
-			foreach ($values as $value) {
-				$modvalues .= $value.' = :'.$value.',';
-			}
-			print_r($modvalues);
-		}
-
 		public function delete($table,$field,$data){
 			if($_POST):unset($_POST['submit']); $data = implode(',',$_POST['id']); endif;
 			$query = "DELETE FROM $table WHERE $field IN ($data)";
@@ -93,6 +78,9 @@
 			}
 			$this->db->close_db();
 		}
+
+		
+		
 	}
 
  ?>

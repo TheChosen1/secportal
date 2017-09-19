@@ -75,6 +75,32 @@
 				$delete = $utility->delete('users','id',$id);
 			break;
 
+			// API
+			// Read
+			// url(page=api&action=read)
+			// case array("api","users","read",true,true):
+			// 	print_r($param);
+			// 	$users = $utility->read('','users','','','');
+			// 	require VIEW.'api/users/read.php';
+			// break;
+
+			// case array("api","users","read",true,true,true):
+			// 	print_r($param);
+			// 	$users = $utility->read('','users','id',$id,'');
+			// 	require VIEW.'api/users/read.php';
+			// break;
+
+			case array("api","users","read",true,true,true):
+				if($id == 'null'){
+					$users = $utility->read('','users','','','');
+				}else{
+					$users = $utility->read('','users','id',$id,'');
+				}
+				// $users = $utility->read('','users','id',$id,'');
+				require VIEW.'api/users/read.php';
+			break;
+
+
 			// END
 			case array("logout"):
 				session_destroy();
